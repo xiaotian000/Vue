@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue测试实例-菜鸟JavaScript语法</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{5+5}}<br>
+            {{ok? 'YES':'NO'}}<br>
+            {{message.split('').reverse().join('')}}
+            <div v-bind:id="'list-'+id">菜鸟教程</div>
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    ok:true,
+                    message:'RUNOOB', 
+                    id:1  
+                }
+            })
+        </script>
+    </body>
+</html>
