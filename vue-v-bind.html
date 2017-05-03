@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue测试实例-菜鸟v-bind</title>
+    </head>
+    <style>
+        .class1{
+            background: #444;
+            color: #eee;
+        }
+    </style>
+    <body>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+        <div id="app">
+            <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+            <br><br>
+            <div v-bind:class="{'class1':class1}">
+                directiva v-bind:class
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    class1:false
+                }
+            });
+        </script>
+    </body>
+</html>
