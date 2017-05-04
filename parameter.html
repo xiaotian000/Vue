@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue测试实例-参数parameter</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <pre><a v-bind:href="url">菜鸟教程</a></pre>
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+            data: {
+                url:'http://www.runoob.com'
+            }
+            })
+        </script>
+    </body>
+</html>

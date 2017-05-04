@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue测试实例-v-bind:参数</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <pre><a v-bind:href="url">百度</a></pre>
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    url:'http://www.baidu.com'
+                }
+            })
+        </script>
+    </body>
+</html>
