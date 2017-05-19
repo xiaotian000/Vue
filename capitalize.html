@@ -1,0 +1,28 @@
+<!DOCTYPE HTML> 
+<html>
+    <head>
+       <meta charset="utf-8">
+       <title>Vue测试实例 - 过滤器</title>
+       <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{message | capitalize }}
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    message:'runoob'
+                },
+                filters:{
+                    capitalize:function(value){
+                        if(!value)return''
+                        value = value.toString()
+                        return value.charAt(0).toUpperCase()+value.slice(1)
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
