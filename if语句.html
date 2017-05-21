@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>  
+    <head>   
+        <meta charset="utf-8">
+        <title>Vue测试实例 - v-if语句</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p v-if="seen">现在你看到我了</p>
+            <template v-if="ok">
+                <h1>菜鸟教程</h1>
+                <p>学的不仅是技术，更是梦想！</p>
+                <p>哈哈哈哈，打字好辛苦！</p>
+            </template>
+        </div>
+        <script>
+           new Vue({
+               el:'#app',
+               data:{
+                   seen:true,
+                   ok:true                  
+               }
+           })
+        </script>
+    </body>
+</html>
