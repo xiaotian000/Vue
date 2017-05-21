@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue测试实例-v-else-if语句</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-if="type=='A'">
+                A
+            </div>
+            <div v-else-if="type=='B'">
+                B
+            </div>
+            <div v-else-if="type=='C'">
+                C
+            </div>
+            <div v-else>
+                Not A/B/C
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    type:'C'
+                }
+            })
+        </script>
+    </body>
+</html>
