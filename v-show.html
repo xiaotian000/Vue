@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=uft-8">
+        <title>Vue测试实例-v-show</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1 v-show="ok">Hello!</h1>
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              data:{
+                  ok:true
+              }
+          })
+        </script>
+    </body>
+</html>
