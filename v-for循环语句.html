@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+        <title>Vue测试实例-v-for 循环语句</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ol>
+                <li v-for="site in sites">
+                    {{site.name}}
+                </li>
+            </ol>
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              data:{
+                  sites:[
+                      {name:'Runoob'},
+                      {name:'Google'},
+                      {name:'Taobao'}
+                  ]
+              }
+          })
+        </script>
+    </body>
+</html>
