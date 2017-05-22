@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例-v-for迭代属性</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="value in object">
+                    {{value}}
+                </li>
+            </ul>
+        </div>
+        <script>
+         new Vue({
+             el:'#app',
+             data:{
+                 object:{
+                     name:'菜鸟教程',
+                     url:'http://www.runoob.com',
+                     slogan:'学的不仅是技术，更是梦想！'
+                 }
+             }
+         })
+        </script>
+    </body>
+</html>
