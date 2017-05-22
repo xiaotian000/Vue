@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例-computed计算属性</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>原始字符串:{{message}}</p>
+            <p>计算后反转字符串:{{reverseMessage}}</p>
+        </div>
+        <script>
+          var vm = new Vue({
+              el:'#app',
+              data:{
+                  message:'Runoob!'
+              },
+              computed:{
+                  reverseMessage:function(){
+                      return this.message.split('').reverse().join('')
+                  }
+              }
+          })
+        </script>
+    </body>
+</html>
