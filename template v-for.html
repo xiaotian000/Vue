@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例-模板中使用v-for</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <template v-for="site in sites">
+                    <li>{{site.name}}</li>
+                    <li>-------------</li>
+                </template>
+            </ul>
+        </div>
+        <script>
+           new Vue({
+               el:'#app',
+               data:{
+                   sites:[
+                       {name:'Runoob'},
+                       {name:'Google'},
+                       {name:'Taobao'}
+                   ]
+               }
+           })
+        </script>
+    </body>
+</html>
