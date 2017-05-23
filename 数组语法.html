@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 数组语法</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+        <style>
+           .active{
+               width: 200px;
+               height: 200px;
+               background: green;
+           }
+           .text-danger{
+               background: red;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div v-bind:class="[activeClass,errorClass]"></div>
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              data:{
+                  activeClass:'active',
+                  errorClass:'text-danger'
+              }
+          })
+        </script>
+    </body>
+</html>
