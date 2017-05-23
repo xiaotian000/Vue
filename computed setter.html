@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+         <title>Vue测试实例 - computed setter</title>
+         <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+     </head>
+     <body>
+         <div id="app">
+             <p>{{ site }}</p>
+         </div>
+         <script>
+           var vm = new Vue({
+               el:'#app',
+               data:{
+                   name:'Google',
+                   url:'http://www.google.com'
+               },
+               computed:{
+                   site:{
+                       get:function(){
+                           return this.name + ' ' + this.url
+                       },
+                       set:function(newValue){
+                           var names = newValue.split(' ')
+                           this.name = names[0]
+                           this.url = names[names.length - 1]
+                       }
+                   }
+               }
+           })
+           vm.site = '菜鸟教程http://www.runoob.com';
+           document.write('name:' + vm.name);
+           document.write('<br>');
+           document.write('url:' + vm.url);
+         </script>
+     </body>
+ </html>
