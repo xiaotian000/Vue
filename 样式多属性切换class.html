@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 多个属性切换class</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+        <style>
+          .active{
+              width: 100px;
+              height: 100px;
+              background: green;
+          }
+          .text-danger{
+              background: red;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="static" v-bind:class="{active:isActive,'text-danger':hasError}">
+            </div>
+        </div>
+        <script>
+         new Vue({
+             el:'#app',
+             data:{
+                 isActive:true,
+                 hasError:true
+             }
+         })
+        </script>
+    </body>
+</html>
