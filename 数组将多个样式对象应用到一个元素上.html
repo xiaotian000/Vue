@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 使用数组将多个样式对象应用到一个元素上</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-bind:style="[baseStyles,overridingStyles]">菜鸟教程</div>
+        </div>
+        <script>
+           new Vue({
+               el:'#app',
+               data:{
+                   baseStyles:{
+                       color:'green',
+                       fontSize:'30px'
+                   },
+                   overridingStyles:{
+                       'font-weight':'bold'
+                   }
+               }
+           })
+        </script>
+    </body>
+</html>
