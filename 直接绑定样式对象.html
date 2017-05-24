@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 直接绑定样式对象</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-bind:style="styleObject">菜鸟教程</div>
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              data:{
+                  styleObject:{
+                      color:'green',
+                      fontSize:'30px'
+                  }
+              }
+          })
+        </script>
+    </body>
+</html>
