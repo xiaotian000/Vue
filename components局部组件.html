@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="htmltext;/charset=utf-8">
+        <title>Vue测试实例 - components局部组件</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <runoob></runoob>
+        </div>
+        <script>
+         var Child={
+             template:'<h1>自定义组件！</h1>'
+         }
+         new Vue({
+             el:'#app',
+             components:{
+                 'runoob':Child
+             }
+         })
+        </script>
+    </body>
+</html>
