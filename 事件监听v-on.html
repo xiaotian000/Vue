@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 事件监听v-on</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click="counter += 1">增加1</button>
+            <p>这个按钮被点击了{{ counter }}次。</p>
+        </div>
+        <script>
+           new Vue({
+               el:'#app',
+               data:{
+                   counter:0
+               }
+           })
+        </script>
+    </body>
+</html>
