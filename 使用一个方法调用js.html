@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 使用一个方法调用js</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click="greet">Greet</button>
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              data:{
+                  name:'Vue.js'
+              },
+              methods:{
+                  greet:function(event){
+                      alert('Hello ' + this.name + ' !')
+                    if(event){
+                        alert(event.target.tagName)
+                    }
+                  }
+              }
+          })
+          app.greet()
+        </script>
+    </body>
+</html>
