@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - prop父组件传递数据的自定义属性</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <child message="hello!"></child>
+        </div>
+        <script>
+            Vue.component('child',{
+                props:['message'],
+                template:'<span>{{ message }}</span>'
+            })
+          new Vue({
+              el:'#app'
+          })
+        </script>
+    </body>
+</html>
