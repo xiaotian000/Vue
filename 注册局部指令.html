@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 注册局部指令</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>页面载入时，input元素自动获取焦点：</p>
+            <input v-focus> 
+        </div>
+        <script>
+          new Vue({
+              el:'#app',
+              directives:{
+                 focus:{
+                     inserted:function(el){
+                         el:focus()
+                     }
+                 }
+              }
+          })
+        </script>
+    </body>
+</html>
