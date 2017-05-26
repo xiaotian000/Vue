@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 - 自定义指令</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>页面载入时，input元素自动获取焦点：</p>
+            <input v-focus>
+        </div>
+        <script>
+           Vue.directive('focus',{
+               inserted:function(el){
+                   el:focus()
+               }
+           })
+           new Vue({
+               el:'#app'
+           })
+        </script>
+    </body>
+</html>
