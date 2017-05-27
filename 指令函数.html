@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>Vue测试实例 -  指令函数</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-runoob="{color:'green',text:'菜鸟教程！'}"></div>
+        </div>
+        <script>
+          Vue.directive('runoob',function(el,binding){
+              el.innerHTML = binding.value.text
+              el.style.backgroundColor = binding.value.color
+          })
+          new Vue({
+              el:'#app'
+          })
+        </script>
+    </body>
+</html>
