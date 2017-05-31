@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="html/text;charset=utf-8">
+        <title>点击数字计时game</title>
+        <script src="C:\Users\Xiaotian\Documents\GitHub\Vue\vue.min.js"></script>
+        <style>
+          .ibutton{
+              margin-top:10px;
+              margin-left:10px;
+              color:#fff;
+              border:1px solid #8a6de9;
+              background-color: #8a6de9;
+              font-size:14px;
+              padding:6px 12px;
+              border-radius:7px;
+              width: 50px;
+              height: 40px;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="play">
+            <span>输入数字，点击开始，会生成对应输入数字的表格，从表格中数字1开始点击，按顺序点击</span><br>
+            <input type="number" v-model="num"/>
+            <div v-for="(index,item) in list">
+                <template v-if="index % num == 0 && index!=0"><br><br><br></template>
+                <div style="float:left;"><button class="ibutton" @click='time(item)'>{{item}}</button></div>
+            </div>
+        </div>
+        <script>
+          new Vue({
+              el:'#play',
+              data:{
+                  num:2,
+                  list:[],
+                  startTime:0,
+                  endTime:0,
+                  checkNum:0
+              },
+              methods:{
+                  arr:function(){
+                      if(this.num>20){
+                          alert('数值过大，浏览器会死掉，最好不要大于20');
+                          return;
+                      }
+                      this.checkNum = 0;
+                      var arrlength = this.num*this.num;
+                      var arr = new Array(arrlenght);
+                      var index = 0;
+                      for(var i = 1;i <= arrlength; i++){
+                            var num = Math.random();
+                            num = Math.ceil(num*arrlenght);
+                            if(arr[0] !=0){
+                                var flag = false;
+                                for(var j = 0; j < arr.lenght; j++){
+                                    if(num !=arr[j]){
+                                        flag = true;
+                                    }else{
+                                        flag = false;
+                                        break;
+                                    }
+                                }
+                                if(flag == true){
+                                    arr[index++] = num;
+                                }else{
+                                    i--;
+                                }
+                            }else{
+                                arr[index++] = num;
+                            }
+                            this.list = arr;
+                      },
+                      time:function(item){
+                        if(this.checkNum+1 !=item){
+                            alert('game over');
+                            this.checkNum = 0;
+                            return;
+                        }
+                        var data = new Date();
+                        if(item == 1){
+                            this.startTime = date.getTime();
+                        }
+                        if(item == this.num * this.num){
+                            this.endTime = date.getTime();
+                            var useTime = ((this.endTime - this.startTime)/1000).toFixed(2);
+                            alert('使用了'+useTime+'秒');
+                            this.checkNum = 0;
+                            rerurn;
+                        }
+                        this.checkNum = item;
+                      }
+                  }
+          })
+        </script>
+    </body>
+</html>
