@@ -1,3 +1,17 @@
-﻿body
-{
+﻿h3{
+    text-align:center;
+}
+.left {
+    margin-left:14%;
+}
+.item {
+    text-align:center;
+    padding:3%;
+}
+.add {
+    margin-left:15%;
+}
+.off {
+    background-color:lightgrey;
+    border:1px solid lightgrey;
 }
