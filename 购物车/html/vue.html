@@ -56,8 +56,27 @@
                     price += self.count * self.price;
                 }
                 return price;
-            }
+            }      
         },
+        methods: {
+            add: function ($index) {
+                var self = this.data[$index];
+                if (self.count > 10) {
+                    return false;
+                }
+                self.count++;
+            },
+            reduce: function ($index) {
+                var self = this.data[$index];
+                if (self.count <= 1) {
+                    return false
+                }
+                self.count--;
+            },
+            remove: function (item) {
+                this.data.$remove(item);
+            }
+        }
     })
 </script>
 </html>
