@@ -13,7 +13,22 @@
      </div>
     var app = new Vue({
        el:'#app',
-       data:{}
+       Vue.component('logo-picture',{
+         template:'\
+         <div class="main-logo">\
+             <img :src="items[now].src" @click="toggleFlag"/>\
+             <span @click="toggleFlag" class="logoList-arrow"></span>\
+             <transition tag="ul" v-show="flagShow" class="logonList">\
+             <li v-for="(item,index) in items" :key="index" @click="changeFlag(index)" @mouseover="flagHover(index)" :class="{selectback:index=hoverindex}">
+                 <img :src="item.src"/>\
+             </li>\
+             </transition>\
+         </div>' ,
+       data: function(){
+         return{
+          items:[{src:'.. '}]
+    }
+    }
     })
 </body>
 </html>
