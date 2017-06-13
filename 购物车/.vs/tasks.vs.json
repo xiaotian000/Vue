@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "任务-vue",
+      "appliesTo": "html/vue.html",
+      "type": "command"
+    },
+    {
+      "taskName": "任务-vue",
+      "appliesTo": "html/vue.html",
+      "type": "command"
+    }
+  ]
+}
