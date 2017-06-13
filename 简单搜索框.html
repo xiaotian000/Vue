@@ -26,9 +26,26 @@
          </div>' ,
        data: function(){
          return{
-          items:[{src:'.. '}]
+          items:[{src:'.. '}],
+          now:0,
+          flagShow:false,
+          hoverindex:-1
+    }
+    },
+    methods:{
+      toggleFlag:function(){
+      this.flagShow = this.flagShow;
+    },
+    //改变搜索引擎
+    changeFlag:function(index){
+       this.now = index;
+       this.flagShow = false;
+       bus.$item("change",index);
+    },
+    flagHover:function(index){
+       this.hoverindex = index;
     }
     }
-    })
+    });
 </body>
 </html>
